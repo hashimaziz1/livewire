@@ -121,19 +121,6 @@ class CreatePost extends Component
 }
 ```
 
-### Custom attribute name
-
-If you wish to customize the attribute name injected into the validation message, you may do so using the `as: ` parameter:
-
-```php
-use Livewire\Attributes\Validate;
-
-#[Validate('required', as: 'date of birth')]
-public $dob;
-```
-
-When validation fails in the above snippet, Laravel will use "date of birth" instead of "dob" as the name of the field in the validation message. The generated message will be "The date of birth field is required" instead of "The dob field is required".
-
 ### Custom validation message
 
 To bypass Laravel's validation message and replace it with your own, you can use the `message: ` parameter in the `#[Validate]` attribute:
@@ -325,7 +312,7 @@ Now, in the above example, even though `#[Validate]` is empty, it will tell Live
 
 Out-of-the-box, Laravel provides sensible validation messages like "The title field is required." if the `$title` property has the `required` rule attached to it.
 
-However, you may need to customize the language of these error messages to better suite your application and its users.
+However, you may need to customize the language of these error messages to better suit your application and its users.
 
 ### Custom attribute names
 
